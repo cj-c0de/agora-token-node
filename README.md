@@ -80,6 +80,10 @@ The `Priviledges` object in the code defines various privileges:
 
 To add a privilege to a token, call `addPrivilege` on the `AccessToken` instance.
 
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or create a pull request with improvements, bug fixes, or additional features.
+
 ## License
 
 This project is open-source and available under the MIT License.
