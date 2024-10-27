@@ -1,0 +1,15 @@
+{
+  "name": "agora-token-node",
+  "version": "1.0.0",
+  "description": "Generate token for Agora",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Sajjad Dastgerdi",
+  "license": "MIT",
+  "dependencies": {
+    "crc-32": "^1.2.0",
+    "cuint": "0.2.2"
+  }
+}
