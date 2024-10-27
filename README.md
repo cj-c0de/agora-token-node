@@ -30,4 +30,56 @@ This project provides a simple API to generate tokens for specific users, roles,
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/dastgerdidev/agora-token-generator.git
+   git clone https://github.com/dastgerdidev/agora-token-node.git
+   
+2. Navigate to the project directory:
+
+   ```bash
+   cd agora-token-node
+
+2. Install the required dependencies:
+
+   ```bash
+   npm install
+
+## Usage
+
+To generate an Agora token, you need your App ID, App Certificate, Channel Name, User ID (UID), role, and expiration timestamp.
+The main script is `RtcTokenBuilder.buildTokenWithUid` which constructs a token with the provided configuration.
+
+### Parameters
+- **appID:** The App ID from Agora.
+- **appCertificate:** The App Certificate from Agora.
+- **channelName:** The name of the Agora channel.
+- **uid:** The unique user ID.
+- **role:** The role for this user in the channel (e.g., PUBLISHER, SUBSCRIBER).
+- **privilegeExpiredTs:** Timestamp (in seconds) when the token should expire.
+
+## Example
+
+Modify the `appId`, `appCertificate`, `channelName`, and other parameters in `index.js` to match your Agora credentials and desired configuration. Then run:
+
+   ```bash
+   npm start
+   ```
+
+Example output:
+
+   ```bash
+   Token: 006706a719a9d8d4c1d96fc130078366bb3IAC85D7FD8H4D...
+   ```
+
+## Available Privileges
+
+The `Priviledges` object in the code defines various privileges:
+- **kJoinChannel:** Permission to join a channel.
+- **kPublishAudioStream:** Permission to publish an audio stream.
+- **kPublishVideoStream:** Permission to publish a video stream.
+- **kPublishDataStream:** Permission to publish a data stream.
+- **kRtmLogin:** Permission to log in to the Agora RTM system.
+
+To add a privilege to a token, call `addPrivilege` on the `AccessToken` instance.
+
+## License
+
+This project is open-source and available under the MIT License.
